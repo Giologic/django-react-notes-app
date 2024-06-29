@@ -1,7 +1,7 @@
 version: 0.1
 
 endpoints:
-  - name: "Notes Rest API"
+  - name: Notes Rest API
     port: 8000
     type: REST
     networkVisibility: Public
