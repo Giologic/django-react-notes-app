@@ -17,22 +17,24 @@ function RegisterAndLogout() {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route
-          path='/'
-          element={
-            <ProtectedRoute>
-              <Home />
-            </ProtectedRoute>
-          }
-        />
-        <Route path='/login' element={<Login />} />
-        <Route path='/logout' element={<Logout />} />
-        <Route path='/register' element={<RegisterAndLogout />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <div className='flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8'>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <ProtectedRoute>
+                <Home />
+              </ProtectedRoute>
+            }
+          />
+          <Route path='/login' element={<Login />} />
+          <Route path='/logout' element={<Logout />} />
+          <Route path='/register' element={<RegisterAndLogout />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

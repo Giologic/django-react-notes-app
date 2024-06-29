@@ -1,7 +1,12 @@
 import Form from "../components/Form";
+import FormWrapper from "../components/FormWrapper";
 
 function Register() {
-  return <Form route='/api/user/register/' method='register' />;
+  return (
+      <FormWrapper>
+        <Form route='/api/user/register/' method='register' />
+      </FormWrapper>
+  );
 }
 
 export default Register;
